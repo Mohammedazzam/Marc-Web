@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/* 
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+} */
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.349);
+    z-index: 999;
+    padding: 0 50px;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+    margin: 20px 0;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+    transition: width .3s ease-in-out;
+}
+
+.logo:hover{
+    width: 150px;
+}
+
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+section{
+    margin: 100px auto;
+}
+
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+}
+nav ul li:nth-of-type(1){
+    animation-duration: 1s;
+}
+nav ul li:nth-of-type(2){
+    animation-duration: 1.2s;
+}
+nav ul li:nth-of-type(3){
+    animation-duration: 1.4s;
+}
+nav ul li:nth-of-type(4){
+    animation-duration: 1.6s;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #363030;
+    font-size: 14px;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: #E74618;
+    border-top: 2px solid #E74618;
+    border-bottom: 2px solid #E74618;
+}
+
+
+@media only screen and (max-width:700px){
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#E74618, #ff575a);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    nav ul li a:hover{
+        text-decoration: none;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    .menu-icon{
+        display: block;
+    }
+   #menuList{
+       overflow: hidden;
+       transition: 0.5s;
+   }        
+   nav ul li a:hover{
+    color:#ddd
+} 
+
+}
+
+/* Start .header */
+.header{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+.header video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+}
+
+.header .go{
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    cursor: pointer;
+    z-index: 9999;
+}
+.header .go i{
+    position: absolute;
+    bottom: 20px;
+    animation: goto .5s infinite ease-in-out;
+    color:  #ffffffe3;
+}
+
+
+@keyframes goto{
+    0%{bottom: 20px}
+    25%{bottom: 15px}
+    50%{bottom: 10px}
+    75%{bottom: 15px}
+    100%{bottom: 20px}
+}
+
+.scroll-top{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: #e7451877;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    transition: all .2s ease-in-out;
+    color: rgb(255, 255, 255);
+}
+.scroll-top:hover{background-color: #e74518c2}
+.scroll-top i{line-height: 1.5;padding: 5px 10px}
+
+/* End .header */
+
+/* Start about-us  */
+
+.about-us .text-container{
+    padding-top: 160px;
+}
+.about-us .text-container h2{
+    display: none;
+    padding-top: 100px;
+}
+.about-us .text-container p{
+    width: 95%;
+    display: none;
+    padding-top: 100px;
+}
+.about-us .photo-container{
+    padding: 10px;
+    overflow: hidden;
+    opacity: 0;
+}
+.about-us .photo-container img{
+    width: 100%;
+}
+@media only screen and (max-width:700px){
+    .about-us .photo-container img{
+        width: 70%;
+        margin: auto 50px;
+    }
+}
+
+/* Start about-us  */
+
+.Question div:first-of-type{
+    /* overflow: hidden; */
+    margin-top: 5%;
+}
+.Question .video video{
+    width: 100%;
+    object-fit: cover;
+}
+.Question a{
+    text-decoration: none;
+    color: #E7461A;
+}
+.Question a:hover{
+    border-top: 2px solid #E74618;
+    border-bottom: 2px solid #E74618;
+}
+.Question p{
+    font-size: 13.5px;
+    width: 95%;
+}
+
+
+/*start services */
+.services .service{
+    margin-bottom: 50px;
+    /* transition: background-color .15s ease-in-out; */
+}
+
+.services .service label{
+    color: #E7461A;
+    font-size: 18px;
+}
+.services .service ul{
+    list-style: none;
+}
+.services .service ul li{
+    margin: 5px;
+    cursor: pointer;
+    transition: font-size .15s ease-in-out;
+
+}
+.services .service ul li:hover{
+    color: #555555;
+    font-size: 18px;
+}
+
+/*End services */
+
+
+/* start Contact-us */
+.Contact-us p{
+    font-size: 13.5px;
+}
+/* End Contact-us */
+
+
+
+/* start footer */
+.footer .contact{
+    padding-top: 100px;
+}
+.footer .contact div{
+    margin-top: 30px;
+}
+.footer .contact div p{
+    margin: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #444;
+}
+.footer .social {
+    margin: auto 20px;
+}
+.footer .social i{
+    color: #ccc;
+    transition: color .2s ease-in-out;
+    margin: auto 5px;
+}
+.footer .fa-facebook:hover{color: rgba(66, 103, 178, 1);}
+.footer .fa-twitter:hover{color: rgba(63, 165, 213, 1);}
+.footer .fa-instagram:hover{color: rgb(179, 2, 2);}
+
+
+.footer .map{
+    position: relative;
+}
+.footer .back-img,
+.footer .front-img{
+    overflow: hidden;
+    opacity: 0;
+}
+.footer .front-img{
+    position: absolute;
+    left: 30%;
+    top: 10%;
+}
+.footer .back-img img{
+    width: 100%;
+}
+.footer .front-img img{
+    opacity: .8;
+    transition: opacity .3s ease-in-out;
+}
+.footer .front-img img:hover{
+    opacity: 1;
+}
+
+
+
+
+/* End footer */
+@media only screen and (max-width:1200px){
+    .footer .front-img img{width: 70%;}
+    .about-us .text-container{
+        padding-top: 60px !important
+    }
+    section{
+        margin: 30px auto;
+    }
+    .footer .contact div{
+        text-align: center;
+        margin: 10px;
+    }
+}
+@media only screen and (max-width:700px){
+    section{
+        margin: 30px auto;
+    }
+    .about-us .text-container{
+        padding-top: 60px !important
+    }
+    .footer .contact{
+        padding-top: 10px !important
+    }
+    .services .service{
+        margin-bottom: 10px !important
+    }
+    .footer .front-img img{width: 70%;}
+}
+
